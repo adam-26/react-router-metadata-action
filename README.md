@@ -8,6 +8,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 A [react-router-dispatcher](https://github.com/adam-26/react-router-dispatcher) **action** for defining HTML metadata.
+Read the [react-router-dispatcher](https://github.com/adam-26/react-router-dispatcher) documentation if you haven't already done so.
 
 ##### This package supports:
   * server-side rendering using **stream**s
@@ -19,6 +20,14 @@ Internally, [react-html-metadata](https://github.com/adam-26/react-html-metadata
 about how to define metadata you should view that packages [readme file](https://github.com/adam-26/react-html-metadata).
 
 ### Usage
+
+```js
+import getMetadataAction, { GET_METADATA } from 'react-router-metadata-action';
+```
+
+### Example
+
+##### Using the metadata action
 
 ```js
 import React, { Component } from 'react';
@@ -65,16 +74,31 @@ const mapParamsToProps = ({ assets }) => ({ assets });
 export default withActions(getMetadataAction(mapParamsToProps))(Root);
 ```
 
+##### Configuring the metadata action using [react-router-dispatcher](https://github.com/adam-26/react-router-dispatcher)
+
+```js
+import { createRouteDispatchers } from 'react-router-dispatcher';
+import { GET_METADATA } from 'react-router-metadata-action';
+import routes from './routes';
+
+const {
+    UniversalRouteDispatcher,
+    ClientRouteDispatcher,
+    dispatchClientActions,
+    dispatchServerActions
+} = createRouteDispatchers(routes, [[GET_METADATA]]);
+
+```
 
 ### Install
 
-#### NPM
+##### NPM
 
 ```js
 npm install --save react-router-metadata-action
 ```
 
-#### Yarn
+##### Yarn
 
 ```js
 yarn add react-router-metadata-action
