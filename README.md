@@ -8,21 +8,38 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 A [react-router-dispatcher](https://github.com/adam-26/react-router-dispatcher) **action** for defining HTML metadata.
+
 Read the [react-router-dispatcher](https://github.com/adam-26/react-router-dispatcher) documentation if you haven't already done so.
 
 ##### This package supports:
   * server-side rendering using **stream**s
   * composing metadata from nested components (just like [react-helmet](https://github.com/nfl/react-helmet))
 
-There is an [working example here](https://github.com/adam-26/react-router-metadata/tree/master/examples/ssr)
+There is an [working example here](https://github.com/adam-26/react-router-metadata-action/tree/master/examples/ssr)
 
 Internally, [react-html-metadata](https://github.com/adam-26/react-html-metadata) is used to support the use of metadata with the react SSR stream interface, for more information
 about how to define metadata you should view that packages [readme file](https://github.com/adam-26/react-html-metadata).
+
+### Install
+
+##### NPM
+
+```js
+npm install --save react-router-metadata-action
+```
+
+##### Yarn
+
+```js
+yarn add react-router-metadata-action
+```
 
 ### Usage
 
 ```js
 import getMetadataAction, { GET_METADATA } from 'react-router-metadata-action';
+
+// GET_METADATA is the action name, used to configure react-router-dispatcher
 ```
 
 ### Example
@@ -90,20 +107,6 @@ const {
 
 ```
 
-### Install
-
-##### NPM
-
-```js
-npm install --save react-router-metadata-action
-```
-
-##### Yarn
-
-```js
-yarn add react-router-metadata-action
-```
-
 ### API
 
 `getMetadataAction(paramsToProps)`
@@ -115,7 +118,7 @@ yarn add react-router-metadata-action
   * An optional function that maps action parameters to component props
 
 ### Contribute
-For questions or issues, please [open an issue](https://github.com/adam-26/react-html-metadata/issues), and you're welcome to submit a PR for bug fixes and feature requests.
+For questions or issues, please [open an issue](https://github.com/adam-26/react-router-metadata-action/issues), and you're welcome to submit a PR for bug fixes and feature requests.
 
 Before submitting a PR, ensure you run `npm test` to verify that your coe adheres to the configured lint rules and passes all tests. Be sure to include unit tests for any code changes or additions.
 
