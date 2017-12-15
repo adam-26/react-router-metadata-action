@@ -1,5 +1,7 @@
 # react-router-metadata-action
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adam-26/react-router-metadata-action.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/react-router-metadata-action.svg)](https://www.npmjs.com/package/react-router-metadata-action)
 [![npm](https://img.shields.io/npm/dm/react-router-metadata-action.svg)](https://www.npmjs.com/package/react-router-metadata-action)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/adam-26/react-router-metadata-action/master.svg)](https://circleci.com/gh/adam-26/react-router-metadata-action/tree/master)
